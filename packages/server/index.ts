@@ -10,6 +10,9 @@ const port = process.env.PORT || 3000;
 app.get('/', (req: Request, res: Response) => {
     res.send('Hello world');
 });
+app.get('/api/hello', (req: Request, res: Response) => {
+    res.send({ message: 'Hello from the API!' });
+});
 
 
 app.listen(port, () => {
